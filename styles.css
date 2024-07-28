@@ -1,0 +1,169 @@
+/* styles.css */
+
+body {
+    font-family: 'Roboto Mono', monospace;
+    background-color: #121212;  /* Dark background */
+    color: #e0e0e0;  /* Light text color */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    width: 100%;
+    background-color: #1f1f1f;  /* Darker header background */
+    color: #800080;  /* Purple text color */
+    padding: 1rem 0;
+    border-bottom: 1px solid #333;  /* Dark border */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);  /* Subtle shadow for depth */
+    display: flex;
+    justify-content: center;
+}
+
+header .logo h1 {
+    font-family: 'Orbitron', sans-serif;  /* Futuristic font */
+    font-size: 2rem;
+    margin: 0;
+    letter-spacing: 0.1rem;
+}
+
+main {
+    width: 100%;
+    max-width: 1200px;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#panty-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    width: 100%;
+}
+
+.panty-item {
+    background: #1f1f1f;  /* Dark background for items */
+    border: 1px solid #333;  /* Darker border */
+    border-radius: 8px;  /* Rounded corners */
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;  /* Smooth animations */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);  /* Subtle shadow */
+    text-align: center;
+}
+
+.panty-item:hover {
+    transform: translateY(-10px);  /* Lift effect on hover */
+    box-shadow: 0 8px 16px rgba(128, 0, 128, 0.2);  /* Soft purple shadow */
+}
+
+.panty-item img {
+    width: 100%;  /* This will make the image fill the container width */
+    height: auto; /* This maintains the aspect ratio */
+    border-bottom: 1px solid #333;  /* Dark border at the bottom of the image */
+}
+
+.panty-item p {
+    padding: 1rem;
+    color: #b3b3b3;  /* Light text for descriptions */
+    font-family: 'Roboto Mono', monospace;  /* Monospaced font for a tech look */
+    margin: 0;
+}
+
+footer {
+    background-color: #1f1f1f;  /* Darker footer background */
+    color: #800080;  /* Purple text color */
+    text-align: center;
+    padding: 1rem 0;
+    width: 100%;
+    border-top: 1px solid #333;  /* Dark border */
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.5);  /* Subtle shadow for depth */
+    position: relative;
+}
+
+footer a {
+    color: #800080;  /* Purple link color */
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 2; /* Sit on top */
+    padding-top: 60px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0,0,0,0.8); /* Black w/ opacity */
+}
+
+/* Modal Content (image) */
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+
+/* Caption of Modal Image */
+#caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+}
+
+/* Add Animation - Zoom in the Modal */
+.modal-content, #caption {
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+@keyframes zoom {
+    from {transform:scale(0)} 
+    to {transform:scale(1)}
+}
+
+/* The Close Button */
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header .logo h1 {
+        font-size: 1.5rem;
+    }
+
+    .panty-item {
+        width: 100%;
+    }
+}
